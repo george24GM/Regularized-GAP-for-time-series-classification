@@ -11,7 +11,7 @@ This repository contains a PyTorch implementation for comparing three pooling st
 
 The code runs end-to-end experiments on multiple UCR-style datasets, evaluates each method across multiple random seeds, selects the regularization parameter for `reg_WGAP` by stratified cross-validation, and saves detailed logs and summary tables.
 
-The FCN backbone follows the standard time-series FCN design with three 1D convolutional blocks and global pooling, a strong baseline in time series classification :contentReference[oaicite:0]{index=0}. The general deep-learning context for time-series classification is reviewed in detail in Ismail Fawaz et al. :contentReference[oaicite:1]{index=1}.
+The FCN backbone follows the standard time-series FCN design with three 1D convolutional blocks and global pooling, a strong baseline in time series classification. The general deep-learning context for time-series classification is reviewed in detail in Ismail Fawaz et al. (2019)
 
 ---
 
