@@ -9,7 +9,7 @@ This repository contains a PyTorch implementation for comparing three pooling st
 - **WGAP**: unconstrained weighted global average pooling
 - **reg_WGAP**: weighted global average pooling with a smoothness penalty and cross-validated regularization
 
-The code runs end-to-end experiments on multiple UCR-style datasets, evaluates each method across multiple random seeds, selects the regularization parameter for `reg_WGAP` by stratified cross-validation, and saves detailed logs and summary tables.
+The code runs end-to-end experiments on multiple UCR-style datasets, evaluates each method across multiple random seeds, selects the regularization parameter for `reg_WGAP` by stratified cross-validation, and saves the summary table.
 
 The FCN backbone follows the standard time-series FCN design with three 1D convolutional blocks and global pooling, a strong baseline in time series classification. The general deep-learning context for time-series classification is reviewed in detail in Ismail Fawaz et al. (2019)
 
@@ -64,7 +64,6 @@ For `reg_WGAP`, the pooling weights \(a_1,\dots,a_T\) are learned jointly with t
 \sum_{t=1}^{T-1} (a_{t+1} - a_t)^2.
 \]
 
-This encourages smoother temporal importance profiles and avoids highly irregular weighting schemes.
 
 The regularization strength `lambda` is selected by cross-validation on the **training set only**.
 
